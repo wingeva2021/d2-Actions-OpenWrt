@@ -42,9 +42,7 @@ on:
   #push:
   # branches: 
   #  - master
-        
-  schedule:
-   - cron: 07 3 * * 4
+
         
   #watch:
   # types: [started]
