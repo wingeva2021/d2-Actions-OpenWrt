@@ -62,7 +62,7 @@ rm -rf package/custom2; mkdir package/custom2
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 #修改默认IP
-sed -i 's/192\.168\.[0-9]*\.[0-9]*/192.168.124.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192\.168\.[0-9]*\.[0-9]*/10.0.1.1/g' package/base-files/files/bin/config_generate
 
 #web登陆密码从password修改为空
 #sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
@@ -86,7 +86,7 @@ sed -i 's/192\.168\.[0-9]*\.[0-9]*/192.168.124.1/g' package/base-files/files/bin
 sed -i "s/hostname='ImmortalWrt'/hostname='Newifi-D2'/g" package/base-files/files/bin/config_generate
 
 #添加turboacc
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+#curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 ##########固件主题添加&修改#########
 #更换lede源码中自带argon主题
@@ -94,7 +94,7 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 
 #添加luci-theme-design(Js版)
 rm -rf feeds/luci/themes/luci-theme-design
-git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
+#git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
 
 #design主题导航栏设置
 #sed -i 's/shadowsocksr/openclash/g' feeds/fichenx/luci-theme-design/luasrc/view/themes/design/header.htm
